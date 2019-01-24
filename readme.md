@@ -82,7 +82,7 @@ Tests have not yet been implemented in this software
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Currently managed by Heroku
 
 ## Built With
 
