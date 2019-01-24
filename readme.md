@@ -68,6 +68,14 @@ npm run client
 
 Once either or both processes are running, navigate in your browser to [http://localhost:3000](http://localhost:3000) to view the client, and [http://localhost:8081](http://localhost:8081) to view the server
 
+## Run scraper independently
+
+```
+node bin/writeJayPepperjamCSV.js
+```
+
+To run the other scraper processes, simply change writeJayPepperjamCSV.js to any alternate .js file
+
 ## Running the tests
 
 Tests have not yet been implemented in this software
