@@ -8,15 +8,19 @@ import styles from "./styles";
 
 const Pepperjam = props => {
   const { classes } = props;
-  const handleClick = () => {
+  const handleDownload = () => {
     Axios.get("/pepperjam/download").then(res => {
       FileDownload(res.data, "pepperjam.csv");
     });
   };
+  const handkeScrape = () => {
+    Axios.get("/pepperjam/runScraperTXt");
+  };
   return (
     <div className={classes.marginTop}>
       <Typography>Pepperjam</Typography>
-      <Button onClick={handleClick}>Download Product Data</Button>
+      <Button onClick={handleDownload}>Download Product Data</Button>
+      <Button onClick={handkeScrape}>Scrape Product Data</Button>
     </div>
   );
 };

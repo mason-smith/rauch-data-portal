@@ -1,6 +1,6 @@
 const fs = require("fs");
 const path = require("path");
-const rootDir = require("../util/path");
+const writeJayPepperjamCSV = require("../controllers/api/pepperjam-scrape-csv");
 
 exports.downloadPepperjam = (req, res, next) => {
   const dataPath = path.join("data", "Download.csv");
@@ -10,4 +10,8 @@ exports.downloadPepperjam = (req, res, next) => {
     }
     res.send(data);
   });
+};
+
+exports.scrapePepperJam = (req, res, next) => {
+  writeJayPepperjamCSV();
 };

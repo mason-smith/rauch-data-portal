@@ -5,7 +5,7 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
-passport.use(new GoogleStrategy());
+// passport.use(new GoogleStrategy());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
