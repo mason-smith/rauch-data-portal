@@ -45,7 +45,7 @@ class Header extends React.Component {
             </Typography>
 
             <Button color="inherit">
-              <Link className={classes.link} to="/pepperjam">
+              <Link className={classes.link} to="/">
                 Login
               </Link>
             </Button>

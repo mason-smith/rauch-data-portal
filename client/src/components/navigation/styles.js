@@ -2,8 +2,7 @@ const drawerWidth = 240;
 const styles = theme => ({
   root: { display: "flex", flexGrow: 1 },
   appBar: {
-    zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: "#263238"
+    zIndex: theme.zIndex.drawer + 1
   },
   grow: {
     flexGrow: 1

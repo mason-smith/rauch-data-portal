@@ -12,12 +12,21 @@ import {
 import InboxIcon from "@material-ui/icons/MoveToInbox";
 import PeopleIcon from "@material-ui/icons/People";
 import MailIcon from "@material-ui/icons/Mail";
+import HomeIcon from "@material-ui/icons/Home";
 
 const AppDrawer = props => {
   const { left, toggleDrawer, classes } = props;
   const sideList = (
     <div className={classes.list}>
       <List>
+        <Link className={classes.link} to="/">
+          <ListItem button>
+            <ListItemIcon>
+              <HomeIcon />
+            </ListItemIcon>
+            <ListItemText primary="Home" />
+          </ListItem>
+        </Link>
         <Link className={classes.link} to="/pepperjam">
           <ListItem button>
             <ListItemIcon>

@@ -19,8 +19,22 @@ const Pepperjam = props => {
   return (
     <div className={classes.marginTop}>
       <Typography>Pepperjam</Typography>
-      <Button onClick={handleDownload}>Download Product Data</Button>
-      <Button onClick={handkeScrape}>Scrape Product Data</Button>
+      <Button
+        color="primary"
+        variant="contained"
+        className={classes.button}
+        onClick={handleDownload}
+      >
+        Download file in CSV format
+      </Button>
+      <Button
+        color="secondary"
+        variant="outlined"
+        className={classes.button}
+        onClick={handkeScrape}
+      >
+        Scrape Product Data
+      </Button>
     </div>
   );
 };

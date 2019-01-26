@@ -3,8 +3,8 @@ const router = express.Router();
 
 const pepperjamController = require("../controllers/pepperjam");
 
-router.get("/download", pepperjamController.downloadPepperjam);
+router.get("/download", pepperjamController.downloadPepperjamCSV);
 
-router.get("/runScraperTXt", pepperjamController.scrapePepperJam);
+router.get("/runScraperCSV", pepperjamController.scrapePepperJam);
 
 module.exports = router;
