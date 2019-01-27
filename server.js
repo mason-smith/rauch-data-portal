@@ -1,12 +1,15 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
+const cookieSession = require("cookie-session");
+const passport = require("passport");
 
 // Local dependencies
 const authRoutes = require("./routes/auth");
 const pepperjamRoutes = require("./routes/pepperjam");
-require("./services/passport");
 const keys = require("./config/keys");
+require("./models/User");
+require("./services/passport");
 
 mongoose.connect(
   keys.mongoURI,
@@ -15,6 +18,14 @@ mongoose.connect(
 
 const app = express();
 
+app.use(
+  cookieSession({
+    maxAge: 30 * 24 * 60 * 60 * 1000,
+    keys: [keys.cookieKey]
+  })
+);
+app.use(passport.initialize());
+app.use(passport.session());
 // body-parser config
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

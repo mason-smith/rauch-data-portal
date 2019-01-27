@@ -1,9 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const authConroller = require("../controllers/auth");
+const passport = require("passport");
 
-router.get("", authConroller.authenticationController);
+router.get(
+  "/",
+  passport.authenticate("google", { scope: ["profile", "email"] })
+);
 
-router.get("/callback", authConroller.authenticationCallbackController);
+router.get("/callback", passport.authenticate("google"));
+
+router.get("/api/current_user", (req, res) => {
+  res.send(req.user);
+});
 
 module.exports = router;
