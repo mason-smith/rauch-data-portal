@@ -45,9 +45,9 @@ class Header extends React.Component {
             </Typography>
 
             <Button color="inherit">
-              <Link className={classes.link} to="/">
+              <a className={classes.link} href="/auth/google">
                 Login
-              </Link>
+              </a>
             </Button>
           </Toolbar>
         </AppBar>
