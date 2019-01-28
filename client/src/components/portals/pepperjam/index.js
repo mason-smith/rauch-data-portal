@@ -13,8 +13,8 @@ const Pepperjam = props => {
       FileDownload(res.data, "pepperjam.csv");
     });
   };
-  const handkeScrape = () => {
-    Axios.get("/pepperjam/runScraperTXt");
+  const handleScrape = () => {
+    Axios.get("/pepperjam/runScraperCSV");
   };
   return (
     <div className={classes.marginTop}>
@@ -31,7 +31,7 @@ const Pepperjam = props => {
         color="secondary"
         variant="outlined"
         className={classes.button}
-        onClick={handkeScrape}
+        onClick={handleScrape}
       >
         Scrape Product Data
       </Button>
