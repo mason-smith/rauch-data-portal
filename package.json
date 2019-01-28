@@ -6,9 +6,11 @@
   "scripts": {
     "start": "node server.js",
     "client": "cd client && yarn start",
+    "clientBuild": "cd client && yarn && yarn build",
     "server": "nodemon server.js",
     "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\"",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn --prefix client && yarn build --prefix client"
+
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn clientBuild"
   },
   "keywords": [],
   "author": "",
