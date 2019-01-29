@@ -8,13 +8,21 @@ import styles from "./styles";
 
 const Pepperjam = props => {
   const { classes } = props;
-  const handleDownload = () => {
-    Axios.get("/pepperjam/download").then(res => {
+  const handleDownloadCSV = () => {
+    Axios.get("/pepperjam/downloadCSV").then(res => {
       FileDownload(res.data, "pepperjam.csv");
     });
   };
-  const handleScrape = () => {
+  const handleScraperCSV = () => {
     Axios.get("/pepperjam/runScraperCSV");
+  };
+  const handleDownloadTXT = () => {
+    Axios.get("/pepperjam/downloadTXT").then(res => {
+      FileDownload(res.data, "pepperjam.txt");
+    });
+  };
+  const handleScraperTXT = () => {
+    Axios.get("/pepperjam/runScraperTXT");
   };
   return (
     <div className={classes.marginTop}>
@@ -23,7 +31,7 @@ const Pepperjam = props => {
         color="primary"
         variant="contained"
         className={classes.button}
-        onClick={handleDownload}
+        onClick={handleDownloadCSV}
       >
         Download file in CSV format
       </Button>
@@ -31,7 +39,23 @@ const Pepperjam = props => {
         color="secondary"
         variant="outlined"
         className={classes.button}
-        onClick={handleScrape}
+        onClick={handleScraperCSV}
+      >
+        Scrape Product Data
+      </Button>
+      <Button
+        color="primary"
+        variant="contained"
+        className={classes.button}
+        onClick={handleDownloadTXT}
+      >
+        Download file in TXT format
+      </Button>
+      <Button
+        color="secondary"
+        variant="outlined"
+        className={classes.button}
+        onClick={handleScraperTXT}
       >
         Scrape Product Data
       </Button>

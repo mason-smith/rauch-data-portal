@@ -75,7 +75,7 @@ module.exports = () => {
             .replace(/\s*,\s*|\s+,(\r\n\t|\n|\r\t)/g, " - ")
             .replace(/(\r\n\t|\n|\r\t)/g, " ");
         } else {
-          description = "Description not found"
+          description = "Description not found";
         }
         const link = subCategoryUrls;
         const image_link = $("#product-detail-gallery-main-img").attr("src");
@@ -84,6 +84,7 @@ module.exports = () => {
           .text()
           .replace("Availability: ", "");
         const brand = "Jay Strongwater";
+        console.log(name);
         // Write Row to CSV
         writeStream.write(
           `${name},${sku},${link},https://www.jaystrongwater.com${image_link},${description},${price},${availability},${brand},\n`

@@ -7,6 +7,7 @@ const passport = require("passport");
 // Local dependencies
 const authRoutes = require("./routes/auth");
 const pepperjamRoutes = require("./routes/pepperjam");
+const paragonRoutes = require("./routes/paragon");
 const keys = require("./config/keys");
 require("./models/User");
 require("./services/passport");
@@ -37,6 +38,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use("/auth/google", authRoutes);
 // Download routes
 app.use("/pepperjam", pepperjamRoutes);
+app.use("/paragon", paragonRoutes);
 
 if (process.env.NODE_ENV === "production") {
   /**

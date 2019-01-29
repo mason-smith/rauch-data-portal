@@ -35,6 +35,14 @@ const AppDrawer = props => {
             <ListItemText primary="Pepperjam" />
           </ListItem>
         </Link>
+        <Link className={classes.link} to="/paragon">
+          <ListItem button>
+            <ListItemIcon>
+              <PeopleIcon />
+            </ListItemIcon>
+            <ListItemText primary="Paragon" />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
