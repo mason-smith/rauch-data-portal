@@ -9,9 +9,7 @@ import {
   ListItemIcon,
   ListItemText
 } from "@material-ui/core";
-import InboxIcon from "@material-ui/icons/MoveToInbox";
 import PeopleIcon from "@material-ui/icons/People";
-import MailIcon from "@material-ui/icons/Mail";
 import HomeIcon from "@material-ui/icons/Home";
 
 const AppDrawer = props => {
@@ -45,16 +43,6 @@ const AppDrawer = props => {
         </Link>
       </List>
       <Divider />
-      <List>
-        {["All mail", "Trash", "Spam"].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))}
-      </List>
     </div>
   );
   return (
