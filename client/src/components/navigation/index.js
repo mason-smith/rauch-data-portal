@@ -13,12 +13,14 @@ import AppDrawer from "./Drawer";
 
 import styles from "./styles";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 class Header extends React.Component {
   state = {
     left: false
   };
   render() {
+    console.log(this.props);
     const { classes } = this.props;
     const toggleDrawer = (side, open) => () => {
       this.setState({
@@ -43,7 +45,7 @@ class Header extends React.Component {
                 Rauch Product Feeds
               </Link>
             </Typography>
-            <Button color="inherit">
+            {/* <Button color="inherit">
               <a className={classes.link} href="/pepperjam">
                 Pepperjam
               </a>
@@ -52,13 +54,13 @@ class Header extends React.Component {
               <a className={classes.link} href="/paragon">
                 Paragon
               </a>
-            </Button>
+            </Button> */}
 
-            {/* <Button color="inherit">
+            <Button color="inherit">
               <a className={classes.link} href="/auth/google">
                 Login
               </a>
-            </Button> */}
+            </Button>
           </Toolbar>
         </AppBar>
         <AppDrawer
@@ -75,4 +77,11 @@ Header.propTypes = {
   classes: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Header);
+const mapStateToProps = ({ auth }) => {
+  return { auth };
+};
+
+export default connect(
+  mapStateToProps,
+  {}
+)(withStyles(styles)(Header));
