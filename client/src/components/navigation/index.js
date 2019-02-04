@@ -45,7 +45,7 @@ class Header extends React.Component {
                 Rauch Product Feeds
               </Link>
             </Typography>
-            {/* <Button color="inherit">
+            <Button color="inherit">
               <a className={classes.link} href="/pepperjam">
                 Pepperjam
               </a>
@@ -54,13 +54,13 @@ class Header extends React.Component {
               <a className={classes.link} href="/paragon">
                 Paragon
               </a>
-            </Button> */}
+            </Button>
 
-            <Button color="inherit">
+            {/* <Button color="inherit">
               <a className={classes.link} href="/auth/google">
                 Login
               </a>
-            </Button>
+            </Button> */}
           </Toolbar>
         </AppBar>
         <AppDrawer

@@ -9,8 +9,8 @@ const AppRouter = () => {
     <BrowserRouter>
       <div>
         <Header />
-        <Route path="/" exact component={Landing} />
-        <Route path="/dashboard" exact component={Main} />
+        <Route path="/" exact component={Main} />
+        {/* <Route path="/dashboard" exact component={Main} /> */}
         <Route path="/pepperjam" exact component={Pepperjam} />
         <Route path="/paragon" exact component={Paragon} />
       </div>
