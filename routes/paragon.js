@@ -7,4 +7,8 @@ router.get("/runJayScraper", paragonController.writeJayProducts);
 
 router.get("/downloadJayData", paragonController.downloadJayData);
 
+router.get("/runRadkoScraper", paragonController.writeRadkoProducts);
+
+router.get("/downloadRadkoData", paragonController.downloadRadkoData);
+
 module.exports = router;

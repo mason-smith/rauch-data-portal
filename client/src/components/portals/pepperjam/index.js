@@ -77,7 +77,7 @@ class Pepperjam extends React.Component {
               className={classes.button}
               onClick={this.handleScraperCSV}
             >
-              Retreive Product Data in CSV format
+              Retreive Jay Strongwater Product Data in CSV format
             </Button>
             {this.state.linearCSVProgress && (
               <div>
@@ -107,7 +107,7 @@ class Pepperjam extends React.Component {
               className={classes.button}
               onClick={this.handleScraperTXT}
             >
-              Retreive Product Data in TXT format
+              Retreive Jay Strongwater Product Data in TXT format
             </Button>
             {this.state.linearTXTProgress && (
               <div>
