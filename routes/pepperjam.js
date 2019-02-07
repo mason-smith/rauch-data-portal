@@ -11,4 +11,6 @@ router.get("/runScraperTXT", pepperjamController.scrapePepperJamTXT);
 
 router.get("/downloadTXT", pepperjamController.downloadPepperjamTXT);
 
+router.get("/viewPepperjamTXT", pepperjamController.viewPepperjamTXT);
+
 module.exports = router;

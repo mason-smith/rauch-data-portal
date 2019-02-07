@@ -30,3 +30,7 @@ exports.downloadPepperjamTXT = (req, res, next) => {
 exports.scrapePepperJamTXT = (req, res, next) => {
   writeJayPepperjamTXT();
 };
+
+exports.viewPepperjamTXT = (req, res, next) => {
+  res.sendFile(path.join(rootDir, "data", "PepperjamFeed.txt"));
+};
