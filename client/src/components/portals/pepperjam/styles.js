@@ -8,8 +8,8 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: "100vw",
-    height: "100vh"
+    width: "75vw",
+    height: "75vh"
   },
   link: {
     textDecoration: "none",

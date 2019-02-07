@@ -5,8 +5,8 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    width: "100vw",
-    height: "100vh"
+    width: "75vw",
+    height: "75vh"
   },
   paper: {
     width: "66.66vw",
@@ -21,8 +21,8 @@ const styles = theme => ({
     display: "flex",
     justifyContent: "space-evenly",
     alignItems: "center",
-    width: "100vw",
-    height: "100vh"
+    width: "75vw",
+    height: "75vh"
   },
   link: {
     textDecoration: "none",
