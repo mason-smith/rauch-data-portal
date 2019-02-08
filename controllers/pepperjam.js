@@ -1,5 +1,7 @@
 const fs = require("fs");
 const path = require("path");
+const rootDir = require("../util/path");
+
 const writeJayPepperjamCSV = require("../controllers/api/pepperjam-scrape-csv");
 const writeJayPepperjamTXT = require("../controllers/api/pepperjam-scrape-txt");
 
@@ -32,5 +34,7 @@ exports.scrapePepperJamTXT = (req, res, next) => {
 };
 
 exports.viewPepperjamTXT = (req, res, next) => {
-  res.sendFile(path.join(rootDir, "data", "PepperjamFeed.txt"));
+  res
+    .set({ "content-type": "text/plain; charset=utf-8" })
+    .send(path.join(rootDir, "data", "PepperjamFeed.txt"));
 };

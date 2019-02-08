@@ -1,7 +1,10 @@
 const request = require("request");
 const cheerio = require("cheerio");
 const fs = require("fs");
-const writeStream = fs.createWriteStream("data/PepperjamFeed.txt");
+// const writeStream = fs.createWriteStream("data/PepperjamFeed.txt");
+const writeStream = fs.createWriteStream(
+  "client/public/data/PepperjamFeed.txt"
+);
 
 // Write Headers to CSV
 writeStream.write(

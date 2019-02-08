@@ -120,6 +120,7 @@ class Pepperjam extends React.Component {
               </div>
             )}
           </Grid>
+          {/* <a href="/data/PepperjamFeed.txt">GO TO TXT PAGE</a> */}
         </Grid>
       </div>
     );
