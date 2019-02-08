@@ -61,16 +61,6 @@ class Pepperjam extends React.Component {
       <div className={classes.landingMain}>
         <Grid container className={classes.root} spacing={16}>
           <Grid item md={6} xs={12}>
-            {this.state.isCSVVisible && (
-              <Button
-                color="primary"
-                variant="contained"
-                className={classes.button}
-                onClick={this.handleDownloadCSV}
-              >
-                Download file in CSV format
-              </Button>
-            )}
             <Button
               color="secondary"
               variant="outlined"
@@ -89,18 +79,18 @@ class Pepperjam extends React.Component {
                 <LinearProgress color="secondary" />
               </div>
             )}
-          </Grid>
-          <Grid item md={6} xs={12}>
-            {this.state.isTXTVisible && (
+            {this.state.isCSVVisible && (
               <Button
                 color="primary"
                 variant="contained"
                 className={classes.button}
-                onClick={this.handleDownloadTXT}
+                onClick={this.handleDownloadCSV}
               >
-                Download file in TXT format
+                Download file in CSV format
               </Button>
             )}
+          </Grid>
+          <Grid item md={6} xs={12}>
             <Button
               color="secondary"
               variant="outlined"
@@ -118,6 +108,17 @@ class Pepperjam extends React.Component {
                 <br />
                 <LinearProgress color="secondary" />
               </div>
+            )}
+            {this.state.isTXTVisible && (
+              <Button
+                href="data/PepperjamFeed.txt"
+                color="primary"
+                variant="contained"
+                className={classes.button}
+                onClick={this.handleDownloadTXT}
+              >
+                View file in TXT format
+              </Button>
             )}
           </Grid>
           {/* <a href="/data/PepperjamFeed.txt">GO TO TXT PAGE</a> */}
