@@ -115,7 +115,7 @@ class Pepperjam extends React.Component {
                 color="primary"
                 variant="contained"
                 className={classes.button}
-                onClick={this.handleDownloadTXT}
+                // onClick={this.handleDownloadTXT}
               >
                 View file in TXT format
               </Button>
