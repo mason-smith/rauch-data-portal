@@ -111,7 +111,7 @@ class Pepperjam extends React.Component {
             )}
             {this.state.isTXTVisible && (
               <Button
-                href="data/PepperjamFeed.txt"
+                href="text/PepperjamFeed.txt"
                 color="primary"
                 variant="contained"
                 className={classes.button}
